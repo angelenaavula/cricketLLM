@@ -2,7 +2,6 @@
 
 CricketLLM is a **domain-specific AI chatbot** designed to answer cricket-related queries using **LangChain**, **HuggingFace LLMs**, **FAISS vector search**, and **RAG (Retrieval-Augmented Generation)**. It’s powered by the `LLaMA 2 GPTQ` model and understands deep cricket knowledge from curated PDFs like ICC reports, making it ideal for fans, broadcasters, and analysts.
 
-![CricLLM Demo UI](assets/demo_ui.jpg)
 
 ---
 
@@ -17,7 +16,7 @@ CricketLLM is a **domain-specific AI chatbot** designed to answer cricket-relate
 
 ## 🧩 System Architecture
 
-![System Architecture](assets/system_architecture_cricllm.jpg)
+![System Architecture](assets/cricllm_architecture.jpg)
 
 **Main Components:**
 
@@ -44,7 +43,7 @@ CricketLLM is a **domain-specific AI chatbot** designed to answer cricket-relate
 
 ### 🔍 Query: “Which team was announced as Team of the Tournament by ICC in T20 World Cup 2024?”
 
-<img src="assets/demo_sample_query.jpg" width="700"/>
+<img src="assets/sample_query.jpg" width="700"/>
 
 ---
 

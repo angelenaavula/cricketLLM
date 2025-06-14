@@ -16,7 +16,7 @@ CricketLLM is a **domain-specific AI chatbot** designed to answer cricket-relate
 
 ## 🧩 System Architecture
 
-![System Architecture](assets/cricllm_architecture.jpg)
+![System Architecture](assets/cricllm_architecture.png)
 
 **Main Components:**
 

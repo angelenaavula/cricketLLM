@@ -39,13 +39,6 @@ CricketLLM is a **domain-specific AI chatbot** designed to answer cricket-relate
 
 ---
 
-## 🖼️ Project Demo
-
-### 🔍 Query: “Which team was announced as Team of the Tournament by ICC in T20 World Cup 2024?”
-
-<img src="assets/sample_query.jpg" width="700"/>
-
----
 
 ## ⚙️ Technologies Used
 

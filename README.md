@@ -1,70 +1,80 @@
-# Getting Started with Create React App
+# 🏏 CricketLLM – Intelligent Cricket Chatbot with RAG & LLM
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+CricketLLM is a **domain-specific AI chatbot** designed to answer cricket-related queries using **LangChain**, **HuggingFace LLMs**, **FAISS vector search**, and **RAG (Retrieval-Augmented Generation)**. It’s powered by the `LLaMA 2 GPTQ` model and understands deep cricket knowledge from curated PDFs like ICC reports, making it ideal for fans, broadcasters, and analysts.
 
-## Available Scripts
+![CricLLM Demo UI](assets/demo_ui.jpg)
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## 📌 What CricketLLM Does
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- 🧠 Understands cricket queries like *“Who scored the most runs in T20 WC 2024?”*
+- 📄 Extracts data from cricket PDFs and matches queries to the best info
+- 🛠️ Uses **RAG**: retrieves relevant PDF context and feeds it to a smart LLM
+- 🌐 Connected to a **React frontend** and exposed via Flask+ngrok API
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## 🧩 System Architecture
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+![System Architecture](assets/system_architecture_cricllm.jpg)
 
-### `npm run build`
+**Main Components:**
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **Frontend**: Built in **React.js** with chat UI
+- **Backend API**: Built using **Flask** and exposed with **ngrok**
+- **LLM**: `LLaMA 2 13B GPTQ` from HuggingFace
+- **Retriever**: FAISS vector search from cricket documents
+- **Embedding**: `sentence-transformers` for vectorization
+- **Prompt Handling**: LangChain + Prompt Templates
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 💡 Features
 
-### `npm run eject`
+✔️ Ask natural language questions about ICC reports or cricket facts  
+✔️ LLM-powered answers grounded in real cricket documents  
+✔️ Custom prompts to reduce hallucination  
+✔️ Chat interface with API exposed for integration  
+✔️ RAG flow with semantic PDF understanding
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 🖼️ Project Demo
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### 🔍 Query: “Which team was announced as Team of the Tournament by ICC in T20 World Cup 2024?”
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+<img src="assets/demo_sample_query.jpg" width="700"/>
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## ⚙️ Technologies Used
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+| Layer         | Tech Stack                               |
+|---------------|-------------------------------------------|
+| LLM           | LLaMA 2 13B GPTQ                         |
+| Embeddings    | sentence-transformers                   |
+| Retriever     | FAISS Vector Store                      |
+| Framework     | LangChain + HuggingFace Transformers    |
+| Backend       | Flask + CORS + Ngrok                    |
+| Frontend      | React.js                                |
+| Data Source   | ICC World Cup 2024 PDF                  |
 
-### Code Splitting
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+🧠 How it Works (RAG Flow)
+1. 🧾 Load ICC T20 World Cup 2024 PDF
 
-### Analyzing the Bundle Size
+2. ✂️ Chunk and embed using Sentence Transformers
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+3. 🔍 Store vectors using FAISS
 
-### Making a Progressive Web App
+4. ❓ User asks a question
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+5. 📚 Retriever fetches relevant chunks
 
-### Advanced Configuration
+6. 💬 LLaMA model generates answer using LangChain prompt
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
+You can use my sample dataset provided and work with the chatbot.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
